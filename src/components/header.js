@@ -84,7 +84,28 @@ export default function Header() {
                 ))}
             </FlexList>
           </nav>
-          <div>{cta && <Button to={cta.href}>{cta.text}</Button>}</div>
+          {/* This is the "Sign up button" in the menu */}
+          <Flex>
+            <Space />
+            <div>
+              {cta && (
+                <Button to={cta.href} variant={isOpen ? "reversed" : "primary"}>
+                  {cta.text}
+                </Button>
+              )}
+            </div>
+            <Nudge right={3}>
+              <InteractiveIcon
+                title="Toggle menu"
+                onClick={() => setOpen(!isOpen)}
+                className={
+                  mobileNavSVGColorWrapper[isOpen ? "reversed" : "primary"]
+                }
+              >
+                {isOpen ? <X /> : <Menu />}
+              </InteractiveIcon>
+            </Nudge>
+          </Flex>
         </Flex>
       </Container>
       <Container className={mobileHeaderNavWrapper[isOpen ? "open" : "closed"]}>

@@ -47,11 +47,11 @@ export const mobileNavOverlay = style({
   paddingTop: theme.space[4],
   background: theme.colors.primary,
   zIndex: 1,
-  "@media": {
-    [media.small]: {
-      display: "none",
-    },
-  },
+  // "@media": {
+  //   [media.small]: {
+  //     display: "none",
+  //   },
+  // },
 })
 
 export const mobileNavLink = style({
