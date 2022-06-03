@@ -2,6 +2,8 @@ import * as React from "react"
 
 export default function GatsbyWordpressLogo() {
   return (
+
+    // <img src={Image} alt="Ene-logo"/>
     <svg
       width="82"
       height="24"
