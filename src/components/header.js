@@ -14,6 +14,7 @@ import {
 import {
   mobileNavOverlay,
   mobileNavLink,
+  listMobileMeny,
   desktopHeaderNavWrapper,
   mobileHeaderNavWrapper,
   mobileNavSVGColorWrapper,
@@ -74,26 +75,11 @@ export default function Header() {
             <VisuallyHidden>Home</VisuallyHidden>
             <BrandLogo />
           </NavLink>
-          <nav>
-            <FlexList gap={4}>
-              {navItems &&
-                navItems.map((navItem) => (
-                  <li key={navItem.id}>
-                    <NavLink to={navItem.href}>{navItem.text}</NavLink>
-                  </li>
-                ))}
-            </FlexList>
-          </nav>
+
           {/* This is the "Sign up button" in the menu */}
           <Flex>
             <Space />
-            <div>
-              {cta && (
-                <Button to={cta.href} variant={isOpen ? "reversed" : "primary"}>
-                  {cta.text}
-                </Button>
-              )}
-            </div>
+     
             <Nudge right={3}>
               <InteractiveIcon
                 title="Toggle menu"
@@ -147,7 +133,7 @@ export default function Header() {
       {isOpen && (
         <div className={mobileNavOverlay}>
           <nav>
-            <FlexList responsive variant="stretch">
+            <FlexList className={listMobileMeny} responsive variant="stretch">
               {navItems?.map((navItem) => (
                 <li key={navItem.id}>
                   <NavLink to={navItem.href} className={mobileNavLink}>
