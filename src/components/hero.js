@@ -18,8 +18,11 @@ import {
 } from "./hero.css"
 
 export default function Hero(props) {
+
+  const imgUrl = props.image.url;
+
   return (
-    <Section className={startHeroBackground}>
+    <Section style={{backgroundImage: 'url('+ imgUrl +')'}} className={startHeroBackground}>
       <Container>
         <Flex className={startHeroContent} gap={4} variant="responsive">
           <Box width="full">
@@ -53,6 +56,7 @@ export const query = graphql`
       id
       gatsbyImageData
       alt
+      url
     }
   }
 `
