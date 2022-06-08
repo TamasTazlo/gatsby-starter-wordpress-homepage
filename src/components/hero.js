@@ -14,6 +14,7 @@ import {
 } from "./ui"
 import {
   startHeroBackground,
+  startHeroHeading,
   startHeroContent
 } from "./hero.css"
 
@@ -26,8 +27,7 @@ export default function Hero(props) {
       <Container>
         <Flex className={startHeroContent} gap={4} variant="responsive">
           <Box width="full">
-            <Heading as="h1">
-              {props.kicker && <Kicker>{props.kicker}</Kicker>}
+            <Heading as="h1" className={startHeroHeading}>
               {props.h1}
             </Heading>
             <Subhead as="h2">{props.subhead}</Subhead>

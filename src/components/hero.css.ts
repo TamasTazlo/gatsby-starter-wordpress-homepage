@@ -14,5 +14,6 @@ export const startHeroBackground = style({
   
   })
   
-
-  
+  export const startHeroHeading = style({
+    color: "linear-gradient(to right, #ff6600 25%, #ff0099)",
+  })
