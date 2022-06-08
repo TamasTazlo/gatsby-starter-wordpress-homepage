@@ -56,13 +56,14 @@ export const mobileNavOverlay = style({
 })
 
 export const mobileNavLink = style({
-  display: "block",
+  display: "flex",
   color: theme.colors.background,
   fontSize: theme.fontSizes[4],
   paddingTop: theme.space[2],
   paddingBottom: theme.space[2],
   paddingLeft: theme.space[4],
   paddingRight: theme.space[4],
+
 })
 
 export const listMobileMeny = style({
