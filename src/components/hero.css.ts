@@ -6,7 +6,7 @@ import { colors } from "../colors.css"
 export const startHeroBackground = style({
     marginTop:"-90px",
     background:"#f2f2f2",
-    height:"50rem",
+    height:"100vh",
     textAlign:"center"
   })
 
