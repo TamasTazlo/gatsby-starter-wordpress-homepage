@@ -1,6 +1,7 @@
 import { style, styleVariants } from "@vanilla-extract/css"
 import { theme } from "../theme.css"
 import { media } from "./ui.css"
+import { colors } from "../colors.css"
 
 export const startHeroBackground = style({
     marginTop:"-90px",
@@ -15,5 +16,5 @@ export const startHeroBackground = style({
   })
   
   export const startHeroHeading = style({
-    color: "linear-gradient(to right, #ff6600 25%, #ff0099)",
+    color: colors.heading,
   })
