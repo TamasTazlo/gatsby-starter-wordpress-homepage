@@ -71,6 +71,17 @@ exports.createSchemaCustomization = async ({ actions }) => {
       links: [HomepageLink] @link
     }
 
+    type HomepageHero2 implements Node & HomepageBlock {
+      id: ID!
+      blocktype: String
+      heading: String!
+      kicker: String
+      address: String
+      email: String
+      phone: String
+
+    }
+
     type HomepageCta implements Node & HomepageBlock {
       id: ID!
       blocktype: String
@@ -251,6 +262,15 @@ exports.createSchemaCustomization = async ({ actions }) => {
       image: HomepageImage @link
       html: String
     }
+
+    type Post implements Node {
+      id: ID!
+      slug: String!
+      title: String
+      description: String
+      image: HomepageImage @link
+      html: String
+    }
   `)
 
   // WordPress types
@@ -323,6 +343,7 @@ exports.onCreateNode = ({
         const {
           description,
           hero,
+          hero2,
           logoList,
           featureList,
           productList,
@@ -376,6 +397,13 @@ exports.onCreateNode = ({
               .filter(Boolean)
               .map(createLinkNode(node.id)),
           },
+          hero2: {
+            id: createNodeId(`${node.id} >>> HomepageHero2`),
+            ...hero2,
+            address: hero2.address,
+            phone: hero2.phone,
+            email: hero2.email
+          },
           logoList: {
             id: createNodeId(`${node.id} >>> HomepageLogoList`),
             ...logoList,
@@ -424,6 +452,15 @@ exports.onCreateNode = ({
           blocktype: "HomepageHero",
           internal: {
             type: "HomepageHero",
+            contentDigest: node.internal.contentDigest,
+          },
+        })
+
+        actions.createNode({
+          ...blocks.hero2,
+          blocktype: "HomepageHero2",
+          internal: {
+            type: "HomepageHero2",
             contentDigest: node.internal.contentDigest,
           },
         })
@@ -504,6 +541,7 @@ exports.onCreateNode = ({
           image: node.featuredImage?.node?.id,
           content: [
             blocks.hero.id,
+            blocks.hero2.id,
             blocks.logoList.id,
             blocks.productList.id,
             blocks.featureList.id,
