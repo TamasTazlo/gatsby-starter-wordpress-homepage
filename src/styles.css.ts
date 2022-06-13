@@ -10,6 +10,11 @@ globalStyle("body", {
   MozOsxFontSmoothing: "grayscale",
 })
 
+globalStyle("h1", {
+  fontFamily: theme.fonts.text,
+  color: theme.colors.heading,
+})
+
 globalStyle("*", {
   boxSizing: "border-box",
 })

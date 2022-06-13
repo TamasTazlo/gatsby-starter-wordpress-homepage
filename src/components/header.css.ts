@@ -36,8 +36,10 @@ export const mobileHeaderNavWrapper = styleVariants({
 })
 
 export const mobileNavSVGColorWrapper = styleVariants({
-  primary: [{ color: theme.colors.primary }],
-  reversed: [{ color: theme.colors.primary }],
+  // primary: [{ color: theme.colors.primary }],
+  // reversed: [{ color: theme.colors.primary }],
+  primary: [{ color: "#fff" }],
+  reversed: [{ color: "#fff" }],
 })
 
 

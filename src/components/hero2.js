@@ -11,16 +11,22 @@ import {
   Section,
   Subhead,
   Text,
+  NavLink,
 } from "./ui"
 import {
   startHeroBackground,
   startHeroHeading,
-  startHeroContent
+  startHeroContent,
+  startHeroAddress,
+  startHeroAddressText,
 } from "./hero.css"
 
 export default function Hero(props) {
 
   console.log(props);
+
+  let telURL = "tel:" + props.phone;
+  let emailURL = "mailto:" + props.email;
 
   return (
     <Section>
@@ -31,10 +37,13 @@ export default function Hero(props) {
               {props.h1}
             </Text>
             <Subhead as="h2">{props.kicker}</Subhead>
-            <Text as="p">{props.address}</Text>
-            <Text as="p">{props.phone}</Text>
-            <Text as="p">{props.email}</Text>
-            
+            <Container className={startHeroAddress}>
+            {props.address.split(',').map(el =>
+              <Text as="p" className={startHeroAddressText}>{el}</Text>
+            )}
+            </Container>
+            <Text as="p"><a href={emailURL}>{props.email}</a></Text>
+            <Text as="p"><a href={telURL}>{props.phone}</a></Text>
           </Box>
         </Flex>
       </Container>
