@@ -134,6 +134,7 @@ export default function Footer(props) {
             <VisuallyHidden>Home</VisuallyHidden>
             <BrandLogo />
           </NavLink>
+          <Space size={3} />
           <FlexList>
             {socialLinks &&
               socialLinks.map((link) => {
