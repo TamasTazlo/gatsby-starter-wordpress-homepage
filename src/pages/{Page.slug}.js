@@ -2,6 +2,9 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import { Container, Box, Heading } from "../components/ui"
+import {
+  titleOmOss,
+} from "../style/omoss.css"
 
 export default function Page(props) {
   const { page } = props.data
@@ -9,8 +12,8 @@ export default function Page(props) {
   return (
     <Layout {...page}>
       <Box paddingY={5}>
-        <Container width="narrow">
-          <Heading as="h1">{page.title}</Heading>
+        <Container>
+          <Heading className="titleOmOss" as="h1">{page.title}</Heading>
           <div
             dangerouslySetInnerHTML={{
               __html: page.html,

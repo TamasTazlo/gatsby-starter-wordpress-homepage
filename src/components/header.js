@@ -32,14 +32,14 @@ const data = {
     {
       id: 1,
       navItemType: "Link",
-      href: "#!",
-      text: "Pricing",
+      href: "/portfolio/",
+      text: "Portfolio",
     },
     {
       id: 2,
       navItemType: "Link",
-      href: "#!",
-      text: "About",
+      href: "/omoss",
+      text: "Om oss",
     },
     {
       id: 3,

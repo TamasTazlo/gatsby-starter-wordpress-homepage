@@ -81,7 +81,7 @@ const data = {
     },
     {
       id: 2,
-      href: "#!",
+      href: "/omoss",
       text: "About",
     },
     {

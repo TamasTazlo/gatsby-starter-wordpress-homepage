@@ -4,7 +4,8 @@ import { margin, media } from "./ui.css"
 
 export const desktopHeaderNavWrapper = style({
   position: "relative",
-  zIndex: 1,
+  zIndex: 4,
+
   display: "none",
   "@media": {
     [media.small]: {
@@ -47,6 +48,8 @@ export const mobileNavOverlay = style({
   position: "absolute",
   width: "100vw",
   height: "100vh",
+  textAlign:"center",
+  zIndex:1,
   paddingTop: theme.space[4],
   background: `linear-gradient(to right, rgba(255, 102, 0, 1)0%, rgba(255, 0, 153, 0.9)100%)`,
   marginTop:"-90px",

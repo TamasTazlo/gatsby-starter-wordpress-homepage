@@ -19,6 +19,10 @@ globalStyle("*", {
   boxSizing: "border-box",
 })
 
+globalStyle(".infoTextAboutUs", {
+  textAlign: "center",
+})
+
 globalKeyframes("zoomInUp", {
   "0%": {
     transform: "scale(0.95) translateY(10px) translateX(-50%)",
