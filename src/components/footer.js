@@ -51,6 +51,10 @@ const socialMedia = {
     name: "Twitch",
     icon: <Twitch />,
   },
+  LINKEDIN: {
+    url: "https://www.linkedin.com/",
+    name: "LinkedIn",
+  },
 }
 
 const getSocialURL = ({ service, username }) => {
@@ -104,15 +108,7 @@ const data = {
   ],
   socialLinks: [
     {
-      service: "TWITTER",
-      username: "gatsbyjs",
-    },
-    {
-      service: "INSTAGRAM",
-      username: "gatsbyjs",
-    },
-    {
-      service: "GITHUB",
+      service: "LINKEDIN",
       username: "gatsbyjs",
     },
     {
@@ -120,11 +116,7 @@ const data = {
       username: "gatsbyjs",
     },
     {
-      service: "YOUTUBE",
-      username: "gatsbyjs",
-    },
-    {
-      service: "TWITCH",
+      service: "TWITTER",
       username: "gatsbyjs",
     },
   ],
@@ -142,7 +134,6 @@ export default function Footer(props) {
             <VisuallyHidden>Home</VisuallyHidden>
             <BrandLogo />
           </NavLink>
-          <Space />
           <FlexList>
             {socialLinks &&
               socialLinks.map((link) => {
@@ -151,8 +142,7 @@ export default function Footer(props) {
                   url && (
                     <li key={link.id}>
                       <IconLink to={url}>
-                        <VisuallyHidden>{getSocialName(link)}</VisuallyHidden>
-                        {getSocialIcon(link)}
+                        {getSocialName(link)}
                       </IconLink>
                     </li>
                   )

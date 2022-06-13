@@ -600,6 +600,7 @@ export const iconLink = style({
   ":focus": {
     color: theme.colors.active,
   },
+  textDecoration: "none",
 })
 
 export const interactiveIcon = style({
