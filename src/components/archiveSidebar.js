@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Wrapper, Menu } from "./ArchiveSidebar.styles"
+import { Wrapper, Menu } from "./archiveSidebar.styles"
 
 const ArchiveSidebar = ({ catId, categories }) => {
   const sortedCategories = [...categories].sort((x, y) => {
