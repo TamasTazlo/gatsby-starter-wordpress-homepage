@@ -2,6 +2,7 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import { Container, Box, Heading } from "../components/ui"
+
 import {
   titleOmOss,
 } from "../style/omoss.css"
@@ -21,6 +22,7 @@ export default function Page(props) {
           />
         </Container>
       </Box>
+      
     </Layout>
   )
 }
@@ -40,3 +42,5 @@ export const query = graphql`
     }
   }
 `
+
+

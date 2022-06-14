@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import * as sections from "../components/sections"
 import Fallback from "../components/fallback"
 
+import Blog from "../templates/archive"
 export default function Homepage(props) {
   const { homepage } = props.data
 
@@ -14,6 +15,7 @@ export default function Homepage(props) {
         const Component = sections[blocktype] || Fallback
         return <Component key={id} {...componentProps} />
       })}
+ 
     </Layout>
   )
 }
