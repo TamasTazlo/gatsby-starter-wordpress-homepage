@@ -45,7 +45,7 @@ const data = {
     {
       id: 3,
       navItemType: "Link",
-      href: "/blog/allposts/",
+      href: "/blog/",
       text: "Blog",
     },
   ],

@@ -16,6 +16,7 @@ export default function Post(props) {
               __html: page.html,
             }}
           />
+
         </Container>
       </Box>
     </Layout>
