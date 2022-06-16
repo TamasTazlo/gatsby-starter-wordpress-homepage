@@ -31,7 +31,7 @@ export default function Hero(props) {
     <Section>
       <Container>
         <Flex gap={4} variant="responsive">
-          <Box width="full">
+          <Box width="quarter">
             <Text>
               {props.h1}
             </Text>
@@ -44,7 +44,9 @@ export default function Hero(props) {
             <Text as="p"><a href={emailURL}>{props.email}</a></Text>
             <Text as="p"><a href={telURL}>{props.phone}</a></Text>
           </Box>
-          <ClientList/>
+          <Box  width="full">
+            <ClientList/>
+          </Box>
         </Flex>
       </Container>
     </Section>
