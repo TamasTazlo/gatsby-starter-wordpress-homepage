@@ -1,6 +1,7 @@
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as React from "react"
+import ClientList from './client-list'
 import {
   Box,
   ButtonList,
@@ -23,8 +24,6 @@ import {
 
 export default function Hero(props) {
 
-  console.log(props);
-
   let telURL = "tel:" + props.phone;
   let emailURL = "mailto:" + props.email;
 
@@ -45,6 +44,7 @@ export default function Hero(props) {
             <Text as="p"><a href={emailURL}>{props.email}</a></Text>
             <Text as="p"><a href={telURL}>{props.phone}</a></Text>
           </Box>
+          <ClientList/>
         </Flex>
       </Container>
     </Section>
