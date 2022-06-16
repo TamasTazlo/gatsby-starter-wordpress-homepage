@@ -29,7 +29,7 @@ globalStyle(".workOptionsBox", {
 
 globalStyle(".innerBoxWorkservices", {
   width:"33.33%",
-  padding:20
+  padding:20,
 })
 
 globalStyle(".titleServices", {
@@ -50,6 +50,45 @@ globalStyle(".contactUsInnerBox", {
   width:"50%",
   padding:20
 })
+
+
+
+
+
+
+
+
+
+
+globalStyle(".catNameBox", {
+  display:"flex",
+})
+globalStyle(".catNameBox a", {
+  paddingRight:"20px",
+})
+
+globalStyle(".archiveBox", {
+  display:"flex",
+})
+globalStyle(".archiveinnerBoxTwo", {
+  width:"80%",
+})
+globalStyle(".archiveinnerBoxOne", {
+  width:"20%",
+})
+
+
+globalStyle(".clientNameBox a", {
+  paddingRight:"20px",
+  width:"50%"
+})
+globalStyle(".clientNameBox ul", {
+  width: "50%",
+  float: "left",
+  columns: 2,
+})
+
+
 
 
 
