@@ -40,53 +40,35 @@ export default function ClientList() {
 		}
 	}
 	`)
-function ClientCollumn(props) {
-  let clientsObject = props;
-  console.log({...clientsObject});
-	return firstRow.map(el => {
-		// console.log(el);
-		return (
-			<a href={"/blog" + el.uri} style={{justifySelf: "stretch"}}>
-				<Container style={{padding: "0", width: "100%"}}>
-					<Text as="p">{el.title}</Text>
-					<GatsbyImage style={{minHeight: "300px", width: "100%"}} image={el.featuredImage['node'].gatsbyImage} alt={'test'} />
-					<img srcset={el.featuredImage['node'].srcSet}/>
-				</Container>
-			</a>
-		)
-	});
-}
+	function ClientCollumn(props) {
+	    let indColumnValues = Object.values(props);
+		return indColumnValues.map(el => {
+			return (
+				<a href={"/blog" + el.uri} style={{justifySelf: "stretch"}}>
+				  <Container style={{padding: "0", width: "50%"}}>
+						<Text as="p">{el.title}</Text>
+						<GatsbyImage style={{minHeight: "300px", width: "100%"}} image={el.featuredImage['node'].gatsbyImage} alt={'test'} />
+						<img srcset={el.featuredImage['node'].srcSet}/>
+					</Container>
+				</a>
+			)
+		});
+	}
 
 	const clientArray = data.allWpPost.edges;
 	let firstRow = [];
 	let secondRow = [];
 	clientArray.filter((el, index) => {
-		if(index <= Math.ceil(clientArray.length / 2)){
-      // console.log('client: ' + el['node'].title + ' has been places in the first collumn');
+		if(index < Math.ceil(clientArray.length / 2)){
 			firstRow.push(el['node']);
 		} else {
-      // console.log('client: ' + el['node'].title + ' has been places in the second collumn');
 			secondRow.push(el['node']);
 		}
 	});
-	// console.log('firstRow is: ' + firstRow);
-	// console.log('secondRow is: ' + secondRow);
   return (
-    <Section>
+      <Section style={{display: "flex", flexFlow: "column"}}>
       <ClientCollumn {...firstRow}/>
-      {/* <ClientCollumn {...secondRow}/> */}
+      <ClientCollumn {...secondRow}/>
     </Section>
   )
-	// return firstRow.map(el => {
-	// 	console.log(el);
-	// 	return (
-	// 		<a href={"/blog" + el.uri} style={{justifySelf: "stretch"}}>
-	// 			<Container style={{padding: "0", width: "100%"}}>
-	// 				<Text as="p">{el.title}</Text>
-	// 				<GatsbyImage style={{minHeight: "300px", width: "100%"}} image={el.featuredImage['node'].gatsbyImage} alt={'test'} />
-	// 				<img srcset={el.featuredImage['node'].srcSet}/>
-	// 			</Container>
-	// 		</a>
-	// 	)
-	// });
 }
