@@ -11,6 +11,7 @@ import {
   Kicker,
 } from "./ui"
 
+{/* 
 export default function HomepageCta(props) {
   return (
     <Container width="fullbleed">
@@ -35,6 +36,7 @@ export default function HomepageCta(props) {
     </Container>
   )
 }
+*/}
 
 export const query = graphql`
   fragment HomepageCtaContent on HomepageCta {

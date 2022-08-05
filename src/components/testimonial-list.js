@@ -32,10 +32,12 @@ function Testimonial(props) {
     </Flex>
   )
 }
-
+{/* 
 export default function TestimonialList(props) {
   return (
+    
     <Section>
+    
       <Container>
         <Box center>
           <Heading>
@@ -51,9 +53,11 @@ export default function TestimonialList(props) {
           ))}
         </FlexList>
       </Container>
+       
     </Section>
   )
 }
+*/}
 
 export const query = graphql`
   fragment HomepageTestimonialListContent on HomepageTestimonialList {

@@ -1,6 +1,6 @@
 import { style, styleVariants } from "@vanilla-extract/css"
 import { theme } from "../theme.css"
-import { media } from "./ui.css"
+import { media  } from "./ui.css"
 import { colors } from "../colors.css"
 
 export const startHeroBackground = style({
@@ -8,11 +8,18 @@ export const startHeroBackground = style({
     background:"#f2f2f2",
     height:"100vh",
     textAlign:"center",
-    transform:"scale(1.02041)"
+    opacity: 1,
+    backgroundSize: "cover",
+    display: "table",
+    width: "100%",
+    top: 0,
+    position: "fixed",
+    zIndex:-10
   })
 
   export const startHeroContent = style({
     paddingTop:"190px",
+    
   
   })
   

@@ -27,10 +27,11 @@ function Benefit(props) {
     </Box>
   )
 }
-
+    {/* JSX comment
 export default function BenefitList(props) {
   return (
     <Section>
+      {/* JSX comment
       <Container>
         <Box center>
           {props.heading && <Heading>{props.heading}</Heading>}
@@ -43,9 +44,11 @@ export default function BenefitList(props) {
           ))}
         </FlexList>
       </Container>
+          
     </Section>
   )
 }
+*/}
 
 export const query = graphql`
   fragment HomepageBenefitListContent on HomepageBenefitList {

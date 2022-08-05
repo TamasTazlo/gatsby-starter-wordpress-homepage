@@ -5,7 +5,7 @@ import { margin, media } from "./ui.css"
 export const desktopHeaderNavWrapper = style({
   position: "relative",
   zIndex: 4,
-
+  
   display: "none",
   "@media": {
     [media.small]: {
@@ -49,6 +49,7 @@ export const mobileNavOverlay = style({
   width: "100vw",
   height: "100vh",
   textAlign:"center",
+  verticalAlign: "middle",
   zIndex:1,
   paddingTop: theme.space[4],
   background: `linear-gradient(to right, rgba(255, 102, 0, 1)0%, rgba(255, 0, 153, 0.9)100%)`,
@@ -68,11 +69,15 @@ export const mobileNavLink = style({
   paddingBottom: theme.space[2],
   paddingLeft: theme.space[4],
   paddingRight: theme.space[4],
+  fontSize: 34,
+  fontWeight: 600,
+  color: "#fff",
 
 })
 
 export const listMobileMeny = style({
   flexDirection:"column",
   textAlign:"center",
-  marginTop:"90px"
+  marginTop:"90px",
+  alignItems: "center",
 })

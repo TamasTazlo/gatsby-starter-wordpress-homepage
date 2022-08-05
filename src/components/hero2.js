@@ -21,6 +21,10 @@ import {
   startHeroAddress,
   startHeroAddressText,
 } from "./hero.css"
+import {
+  clientBox,
+  partnerTitleStart
+} from "./hero2.css"
 
 export default function Hero(props) {
 
@@ -28,11 +32,14 @@ export default function Hero(props) {
   let emailURL = "mailto:" + props.email;
 
   return (
-    <Section>
-      <Container>
-        <Flex gap={4} variant="responsive">
+    <Section class={clientBox}>
+      <h2 class={partnerTitleStart}>En partner inom reklam och kommunikation för en ny era
+</h2>
+
+      <Container>    
+        <Flex style={{alignItems: "baseline"}} gap={4} variant="responsive">
           <Box width="quarter">
-            <Text>
+            <Text  >
               {props.h1}
             </Text>
             <Subhead as="h2">{props.kicker}</Subhead>

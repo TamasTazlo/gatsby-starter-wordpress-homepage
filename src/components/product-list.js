@@ -33,6 +33,7 @@ function Product(props) {
 export default function ProductList(props) {
   return (
     <Section>
+      {/* JSX comment
       <Container>
         <Box center paddingY={4}>
           <Heading>
@@ -49,6 +50,7 @@ export default function ProductList(props) {
           ))}
         </FlexList>
       </Container>
+          */}
     </Section>
   )
 }

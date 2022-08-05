@@ -23,10 +23,11 @@ function Stat(props) {
     </Box>
   )
 }
-
+{/* 
 export default function StatList(props) {
   return (
     <Container width="fullbleed">
+
       <Section padding={5} radius="large" background="primary">
         <Flex responsive variant="end">
           <Box width="half">
@@ -59,10 +60,11 @@ export default function StatList(props) {
           </Box>
         </Flex>
       </Section>
+
     </Container>
   )
 }
-
+*/}
 export const query = graphql`
   fragment HomepageStatListContent on HomepageStatList {
     id

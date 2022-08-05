@@ -33,20 +33,20 @@ const data = {
     {
       id: 1,
       navItemType: "Link",
-      href: "/portfolio/",
-      text: "Portfolio",
+      href: "/omoss",
+      text: "Om oss",
     },
     {
       id: 2,
       navItemType: "Link",
-      href: "/omoss",
-      text: "Om oss",
+      href: "/omoss/",
+      text: "Våra Tjänster",
     },
     {
       id: 3,
       navItemType: "Link",
       href: "/blog/",
-      text: "Blog",
+      text: "Kontakt",
     },
   ],
   cta: {

@@ -1,6 +1,8 @@
 import * as React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
+import "./client-list.css"
+
 import {
 	Container,
 	Section,
@@ -13,6 +15,9 @@ import {
 	Icon,
 	LinkList,
 } from "./ui"
+
+import { clientConatiner } from "./client-list.css"
+
 
 export default function ClientList() {
 	const data = useStaticQuery(graphql`
@@ -44,13 +49,18 @@ export default function ClientList() {
 	    let indColumnValues = Object.values(props);
 		return indColumnValues.map(el => {
 			return (
+				<div  className={clientConatiner}>
 				<a href={"/blog" + el.uri} style={{justifySelf: "stretch"}}>
-				  <Container style={{padding: "0", width: "50%"}}>
-						<Text as="p">{el.title}</Text>
-						<GatsbyImage style={{minHeight: "300px", width: "100%"}} image={el.featuredImage['node'].gatsbyImage} alt={'test'} />
+				  <Container className="imageClientContainer" style={{padding: "0"}}>
+						<GatsbyImage  style={{marginBottom:"20px",maxHeight: "270px", minWidth: "450px"}} image={el.featuredImage['node'].gatsbyImage} alt={'test'} />
+						<div className="overlay">
+							<Text className="textClient" as="p">{el.title}</Text>
+						</div>
 						<img srcset={el.featuredImage['node'].srcSet}/>
 					</Container>
+					
 				</a>
+				</div>
 			)
 		});
 	}
@@ -66,9 +76,13 @@ export default function ClientList() {
 		}
 	});
   return (
-      <Section style={{display: "flex", flexFlow: "column"}}>
-      <ClientCollumn {...firstRow}/>
-      <ClientCollumn {...secondRow}/>
+      <Section style={{display: "flex", flexFlow:"interheit"}}>
+	   <div>
+          <ClientCollumn  {...firstRow}/>
+	   	</div>
+		<div>
+      	  <ClientCollumn {...secondRow}/>
+	    </div>
     </Section>
   )
 }

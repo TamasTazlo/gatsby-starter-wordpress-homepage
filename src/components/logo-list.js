@@ -9,7 +9,7 @@ export function LogoItem(props) {
     <Logo alt={props.alt} image={props.image.gatsbyImageData} size="medium" />
   )
 }
-
+{/* JSX comment
 export default function LogoList(props) {
   return (
     <Section paddingY={4}>
@@ -34,7 +34,7 @@ export default function LogoList(props) {
     </Section>
   )
 }
-
+*/}
 export const query = graphql`
   fragment HomepageLogoListContent on HomepageLogoList {
     id

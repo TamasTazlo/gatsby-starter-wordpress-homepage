@@ -19,6 +19,7 @@ import {
   VisuallyHidden,
 } from "./ui"
 import BrandLogo from "./brand-logo"
+import { footerBox } from "./footer.css"
 
 const socialMedia = {
   TWITTER: {
@@ -75,35 +76,30 @@ const data = {
   links: [
     {
       id: 0,
-      href: "#!",
-      text: "Products",
+      href: "https://se.linkedin.com/company/enestedtco",
+      text: "LinkedIn",
     },
     {
       id: 1,
-      href: "#!",
-      text: "Pricing",
+      href: "https://www.facebook.com/enestedtco/",
+      text: "Facebook",
     },
     {
       id: 2,
-      href: "/omoss",
-      text: "About",
-    },
-    {
-      id: 3,
-      href: "#!",
-      text: "Blog",
+      href: "https://twitter.com/EnestedtCo",
+      text: "witter",
     },
   ],
   meta: [
     {
       id: 0,
       href: "/terms",
-      text: "Terms",
+      text: "Om cookies",
     },
     {
       id: 1,
       href: "/privacy",
-      text: "Privacy Policy",
+      text: "Integritetspolicy",
     },
   ],
   socialLinks: [
@@ -120,39 +116,19 @@ const data = {
       username: "gatsbyjs",
     },
   ],
-  copyright: "© 2022 Gatsby Inc. All rights reserved",
+  copyright: "Copyright © Enestedt & Co 2022",
 }
 
 export default function Footer(props) {
   const { links, meta, socialLinks, copyright } = data
 
   return (
-    <Box as="footer" paddingY={4}>
+    <Box className={footerBox} as="footer" paddingY={4}>
       <Container>
-        <Flex variant="start" responsive>
-          <NavLink to="/">
-            <VisuallyHidden>Home</VisuallyHidden>
-            <BrandLogo />
-          </NavLink>
-          <Space size={3} />
-          <FlexList>
-            {socialLinks &&
-              socialLinks.map((link) => {
-                const url = getSocialURL(link)
-                return (
-                  url && (
-                    <li key={link.id}>
-                      <IconLink to={url}>
-                        {getSocialName(link)}
-                      </IconLink>
-                    </li>
-                  )
-                )
-              })}
-          </FlexList>
-        </Flex>
         <Space size={5} />
         <Flex variant="start" responsive>
+        <BrandLogo />
+        <Space size={1} />
           <FlexList variant="start" responsive>
             {links &&
               links.map((link) => (
@@ -162,6 +138,7 @@ export default function Footer(props) {
               ))}
           </FlexList>
           <Space />
+          <Text variant="small">{copyright}</Text>
           <FlexList>
             {meta &&
               meta.map((link) => (
@@ -172,7 +149,6 @@ export default function Footer(props) {
                 </li>
               ))}
           </FlexList>
-          <Text variant="small">{copyright}</Text>
         </Flex>
       </Container>
       <Space size={3} />
