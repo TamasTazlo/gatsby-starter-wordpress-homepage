@@ -4,7 +4,7 @@ import { media } from "./ui.css"
 import { colors } from "../colors.css"
 
 export const clientBox = style({
-    marginTop: "60%",
+    marginTop: "100vh",
     backgroundColor: "#001c2a",
     marginBottom:"-130px"
   })

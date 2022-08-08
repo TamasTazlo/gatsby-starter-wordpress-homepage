@@ -1,15 +1,15 @@
 import { style, styleVariants } from "@vanilla-extract/css"
 import { theme } from "../theme.css"
-import { media  } from "./ui.css"
 import { colors } from "../colors.css"
 
 export const startHeroBackground = style({
-    marginTop:"-90px",
+    // marginTop:"-90px",
     background:"#f2f2f2",
     height:"100vh",
     textAlign:"center",
     opacity: 1,
     backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
     display: "table",
     width: "100%",
     top: 0,
@@ -19,8 +19,6 @@ export const startHeroBackground = style({
 
   export const startHeroContent = style({
     paddingTop:"190px",
-    
-  
   })
   
   export const startHeroHeading = style({
