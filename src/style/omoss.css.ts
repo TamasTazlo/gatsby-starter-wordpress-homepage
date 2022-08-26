@@ -15,7 +15,7 @@ globalStyle(".infoTextAboutUs", {
 
 globalStyle(".titleOmOss", {
   textAlign: "center",
-  backgroundImage:`linear-gradient(to right, rgba(255, 102, 0, 1)0%, rgba(255, 0, 153, 0.9)100%)`,
+  backgroundImage:`linear-gradient(to right, rgba(255, 102, 0, 1)0%, rgba(255, 0, 153, 1)100%)`,
   lineHeight: 1.5,
   backgroundClip: "text",
   WebkitTextFillColor: "transparent",
@@ -51,15 +51,6 @@ globalStyle(".contactUsInnerBox", {
   padding:20
 })
 
-
-
-
-
-
-
-
-
-
 globalStyle(".catNameBox", {
   display:"flex",
 })
@@ -77,7 +68,6 @@ globalStyle(".archiveinnerBoxOne", {
   width:"20%",
 })
 
-
 globalStyle(".clientNameBox a", {
   paddingRight:"20px",
   width:"50%"
@@ -87,8 +77,3 @@ globalStyle(".clientNameBox ul", {
   float: "left",
   columns: 2,
 })
-
-
-
-
-

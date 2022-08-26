@@ -3,10 +3,12 @@ import { theme } from "../theme.css"
 import { margin, media } from "./ui.css"
 
 export const desktopHeaderNavWrapper = style({
-  position: "relative",
+  position: "fixed",
+  top: 0,
   zIndex: 4,
+  width: '100%',
+  maxWidth: 'unset',
   
-  display: "none",
   "@media": {
     [media.small]: {
       display: "block",
@@ -45,15 +47,15 @@ export const mobileNavSVGColorWrapper = styleVariants({
 
 
 export const mobileNavOverlay = style({
-  position: "absolute",
+  position: "fixed",
   width: "100vw",
-  height: "100vh",
+  height: "101vh",
   textAlign:"center",
   verticalAlign: "middle",
   zIndex:1,
   paddingTop: theme.space[4],
-  background: `linear-gradient(to right, rgba(255, 102, 0, 1)0%, rgba(255, 0, 153, 0.9)100%)`,
-  marginTop:"-90px",
+  background: `linear-gradient(to right, rgba(255, 102, 0, 1)0%, rgba(255, 0, 153, 1)100%)`,
+  top: 0,
   // "@media": {
   //   [media.small]: {
   //     display: "none",

@@ -23,7 +23,8 @@ export const startHeroBackground = style({
   
   export const startHeroHeading = style({
     color: colors.heading,
-    fontSize: theme.fontSizes[7]
+    fontSize: theme.fontSizes[8],
+    fontWeight: 600
   })
 
   export const startHeroAddress = style({
